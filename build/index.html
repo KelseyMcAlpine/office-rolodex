@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dunder Mifflin Directory</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+  </head>
+  <body>
+    <div id="application">
+      <header class="row">
+        <img src="imgs/office-logo.png" alt="office Logo" id="logo" class="small-12 medium-5 columns">
+      </header>
+
+      <main class="row">
+        <div class="row">
+          <section id="contact-cards" class="align-center">
+          </section>
+        </div>
+        <div class="row">
+          <section id="contact-details" class="columns">
+          </section>
+        </div>
+      </main>
+
+      <!-- New Contact Form -->
+      <section class="row contact-form">
+        <h3>Add A New Contact</h3>
+        <div class="small-12 columns">
+          <label>
+            Name
+            <input type="text" name="name" class="form-name">
+          </label>
+          <label>
+            Email
+            <input type="text" name="email" class="form-email">
+          </label>
+          <label>
+            Phone
+            <input type="text" name="phone" class="form-phone">
+          </label>
+          <h3 class="button btn-save">Save</h3>
+          <h3 class="button btn-cancel">Cancel</h3>
+        </div>
+      </section>
+    </div>
+
+    <!-- Contact View Template -->
+    <script type="text/template" id="tmpl-contact-card">
+      <section class="contact-card small-12 medium-4 columns">
+        <div class="staff-pic grayscale">
+          <img src="<%- image %>" label="<%- name %>" class="align-center"/>
+        </div>
+      </section>
+    </script>
+
+    <!-- Contact Details Template -->
+    <script type="text/template" id="tmpl-contact-details">
+      <h2><%- name %></h2>
+      <h4><%- email %></h4>
+      <h4><%- phone %></h4>
+    </script>
+
+    <!-- Entire JS project built by Webpack -->
+    <script src="/app.bundle.js" charset="utf-8"></script>
+  </body>
+</html>
