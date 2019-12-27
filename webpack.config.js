@@ -4,7 +4,7 @@ var DashboardPlugin = require('webpack-dashboard/plugin');
 module.exports = {
   entry: ['babel-polyfill', './src/app.js'],
   output: {
-    path: './build',
+    path: __dirname + '/build',
     filename: 'app.bundle.js'
   },
   module: {
@@ -16,7 +16,7 @@ module.exports = {
   },
   devtool: 'source-map',
   devServer: {
-    contentBase: './build',
+    contentBase: __dirname + '/build',
     historyApiFallback: true,
     hot: true,
     inline: true,
